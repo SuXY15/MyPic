@@ -1,0 +1,1373 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>HesaiTech实习汇报_苏星宇</title></head><body><article class="markdown-body"><h1 id="Title"><a name="user-content-Title" href="#Title" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HesaiTech 实习工作汇报</h1>
+<p>苏星宇 <a href="suxingyu_intern@hesaitech.com"><a href="mailto:suxingyu_intern@hesaitech.com"><a href="mailto:suxingyu_intern@hesaitech.com">suxingyu_intern@hesaitech.com</a></a></a></p>
+<blockquote>
+<p>为期六周的实习居然也就快结束了，时间哗哗响啊～</p>
+</blockquote>
+<p><strong>目录</strong> <a name="table"></a></p>
+<div class="toc">
+<ul>
+<li><a href="#Title">HesaiTech 实习工作汇报</a><ul>
+<li><a href="#_1">一、软件、工具学习</a><ul>
+<li><a href="#_2">(一) 编程语言</a><ul>
+<li><a href="#python">Python</a></li>
+<li><a href="#verilog-hdl">Verilog HDL</a></li>
+<li><a href="#c">C++</a></li>
+</ul>
+</li>
+<li><a href="#_3">(二) 软件</a><ul>
+<li><a href="#solidworks">SolidWorks</a></li>
+<li><a href="#altiumdesigner">AltiumDesigner</a></li>
+<li><a href="#thundbird">Thundbird / 为知笔记</a></li>
+</ul>
+</li>
+<li><a href="#_4">(三) 工具</a><ul>
+<li><a href="#git-markdowm">git / Markdowm</a></li>
+<li><a href="#ssh-samba">ssh / samba</a></li>
+<li><a href="#vtkvisualization-toolkit">VTK(Visualization Toolkit)</a></li>
+<li><a href="#emacs-sublime-text-3">Emacs / Sublime Text 3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_5">二、各类脚本编写</a><ul>
+<li><a href="#1-waveshowpy-db-pdf">1. 波形显示脚本 waveShow.py [输入DB] [输出PDF] <a name="waveShow"></a></a></li>
+<li><a href="#2-waveadaptpy">2. 波形匹配脚本 waveAdapt.py [独立运行] <a name="waveAdapt"></a></a></li>
+<li><a href="#3-waveanalyzepy-db-pdf">3. 波形分析脚本 waveAnalyze.py [输入DB] [输出PDF] <a name="waveAnalyze"></a></a></li>
+<li><a href="#4-datainsertpy-db-db">4. 数据插入脚本 dataInsert.py [输入DB] [更新DB] <a name="dataInsert"></a></a></li>
+<li><a href="#5-pointshowpy-mat">5. 点云显示脚本 pointShow.py [输入Mat] [显示点云] <a name="pointShow"></a></a></li>
+<li><a href="#6-distshowpy-db-pdf">6. 数据显示脚本distShow.py [输入DB] [输出PDF] <a name="distShow"></a></a></li>
+<li><a href="#7-t_basebasegetpy">7. t_base获取脚本baseGet.py [独立运行] <a name="baseGet"></a></a></li>
+<li><a href="#8-writeparapy-param">8. 数据串口烧写脚本writePara.py [输入param] [串口烧写] <a name="writePara"></a></a></li>
+</ul>
+</li>
+<li><a href="#pandartool">三、PandarTool开发维护</a><ul>
+<li><a href="#_6">(一) 基本介绍</a></li>
+<li><a href="#_7">(二) 主要功能</a><ul>
+<li><a href="#1-wavedata">1. 波形数据waveData获取 <a name="waveData"></a></a></li>
+<li><a href="#2-keypoints">2. 校准数据KeyPoints获取 <a name="keyPoints"></a></a></li>
+<li><a href="#3-distmean">3. 校准数据DistMean获取 <a name="distMean"></a></a></li>
+<li><a href="#4">4. 数据查看与修改 <a name="extraImport"></a></a></li>
+<li><a href="#5">5. 单通道更新 <a name="updateData"></a></a></li>
+<li><a href="#6">6. 数据检查与格式输出 <a name="formatData"></a></a></li>
+<li><a href="#7">7. 点云扫描与保存 <a name="pointCloud"></a></a></li>
+<li><a href="#8">8. 程序运行信息显示 <a name="plainText"></a></a></li>
+</ul>
+</li>
+<li><a href="#_8">(三) 其他及注意事项</a></li>
+</ul>
+</li>
+<li><a href="#_9">四、上仓板测试用保护外壳</a><ul>
+<li><a href="#3d">(一) 3D打印外壳</a></li>
+<li><a href="#_10">(二) 电源转接板</a></li>
+</ul>
+</li>
+<li><a href="#verilog">五、Verilog 随机数生成器</a><ul>
+<li><a href="#mersenne-twister">(一) Mersenne Twister随机数生成器</a></li>
+<li><a href="#tausworthe">(二) Tausworthe 随机数生成器</a></li>
+</ul>
+</li>
+<li><a href="#_11">六、简要总结</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h2 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>一、软件、工具学习</h2>
+<p><img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/tools.png" /></p>
+<h4 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(一) 编程语言</h4>
+<h5 id="python"><a name="user-content-python" href="#python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python</h5>
+<ul>
+<li>从几乎从未接触Python开始，第一天入职后即开始学习，至今仍在甚至很多年内也将继续学习的语言。体会到了脚本语言的魅力。从最开始看基础的<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/">Python教程-廖雪峰的官方网站</a>，到慢慢找一些比较系统的资源如盛哥推荐的<a href="http://www.kuqin.com/abyteofpython_cn/">简明Python教程</a>，再到看官方的<code>numpy/scipy</code>的说明文档，虽然容易在写代码时犯基础性的错误，但自己体验一遍错误的过程确实也让我受益良多。目前使用Python还是只能完成一些简单的任务，但以后还会经常用的 ：）。</li>
+</ul>
+<h5 id="verilog-hdl"><a name="user-content-verilog-hdl" href="#verilog-hdl" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Verilog HDL</h5>
+<ul>
+<li>一门接触的更少的语言。以前偶有耳闻 “硬件描述语言” 的大名，但真正自己使用还是相当Excited！从最基础的<code>$display("Hello World!")</code> 到照着例程写一个计数器，到由晋哥提供的LFSR随机数生成器了解语法、写法，再到自己尝试写MersnneTwister算法的Verilog实现(虽然以失败告终&hellip;)，和结合开源代码实现的Tausworthe随机数生成器。虽然主要是模仿尝试，原创性内容很少，但也算是了解了最基本的Verilog的用法。</li>
+</ul>
+<h5 id="c"><a name="user-content-c" href="#c" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>C++</h5>
+<ul>
+<li><code>PandarTool</code>中的Qt部分主要为C++代码，了解了一些Python调用C++的基本用法，和参数变量的传递方法。另外基于个人兴趣了解了一些网络编程的内容，例程为C++代码，使用<code>gcc</code>编译(<em>第一次知道Linux下怎么写C代码&hellip;</em>)。顺便了解了一些Linux系统的基本知识，对系统/进程有所认识。</li>
+</ul>
+<h4 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(二) 软件</h4>
+<h5 id="solidworks"><a name="user-content-solidworks" href="#solidworks" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SolidWorks</h5>
+<ul>
+<li>在学校也曾学习使用过SolidWorks，也画过简单的3D打印件，但多为现成参数而非自己设计实现。就结果而言，应当是一两个小时就能设计好的简单部件，但前前后后改了四版，打了4次废件，效率有点低下。主要学习到了一点设计的技巧，如开孔拔模，立柱支撑，侧孔窄高等。</li>
+</ul>
+<h5 id="altiumdesigner"><a name="user-content-altiumdesigner" href="#altiumdesigner" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>AltiumDesigner</h5>
+<ul>
+<li>一直以来就想学AD，在学校时也曾下载过想自学，但无奈一没有相关练手项目，二没有任何指导，加上网上资源不齐全(官方中文文档仍在整理中)，入门颇为费劲。看了个比较简易的<a href="http://www.bilibili.com/video/av2351785/">Altium Designer教程——两小时快速入门</a>然后自己试着瞎画一点，看看官方有限的中文文档，糊里糊涂做了个小板子。不过也算是了解了基本的使用方法流程，等学习了电子相关知识后，一定再多加学习练习！</li>
+</ul>
+<h5 id="thundbird"><a name="user-content-thundbird" href="#thundbird" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Thundbird / 为知笔记</h5>
+<ul>
+<li>主要受Markdown激励，对支持Markdown的工具产生了巨大的好感。以及第一次尝试笔记软件，真的十分不错，感觉早接触一天，学到的东西就能多一分！还需要多多使用，多多熟悉。<blockquote>
+<p>PS: 曾经用过txt记课程笔记......简直惨不忍睹orz</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(三) 工具</h4>
+<h5 id="git-markdowm"><a name="user-content-git-markdowm" href="#git-markdowm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>git / Markdowm</h5>
+<ul>
+<li>以前也用过简单的git，甚至在github上写过自己的小项目，但却是文件拖拽上传的......系统的看了看git的教程，使用git维护自己的代码后，才算是感受到了其方便性。而Markdown来源于皮哥一次看我写README毫无格式，就简单提点了一二，从此爱上Markdown，各种便利，写文档神器！</li>
+</ul>
+<h5 id="ssh-samba"><a name="user-content-ssh-samba" href="#ssh-samba" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ssh / samba</h5>
+<ul>
+<li>以前也想学一点ssh相关知识来着(曾经买过一个树莓派想搭一个自己的服务器)，奈何未能入门，连最简单的<code>ssh user@ip</code>也没理解，于是乎留到现在。用了ssh / scp以后，看到张姐电脑上的share文件夹可以被晋哥随意存取查看，就试着照教程用samba建了自己的共享文件夹，超级好用！感受到了Linux的便利，再也不想用U盘系列：）。</li>
+</ul>
+<h5 id="vtkvisualization-toolkit"><a name="user-content-vtkvisualization-toolkit" href="#vtkvisualization-toolkit" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>VTK(Visualization Toolkit)</h5>
+<ul>
+<li>以前曾用过一点简单的OpenCV，VTK又有所不同，其特色的管道结构带来了很大的性能提升，三维显示相当优秀，不过了解并不深入，以后用到再继续学习~</li>
+</ul>
+<h5 id="emacs-sublime-text-3"><a name="user-content-emacs-sublime-text-3" href="#emacs-sublime-text-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Emacs / Sublime Text 3</h5>
+<ul>
+<li>曾经用Ubuntu，看到网上教程要用<code>vim</code>改某个文件，我几乎必定会改用<code>nano</code>，对vim的使用有很不好的体验(vim大概对新手不友好吧......)，但想起来有同学推荐过Emacs，就试着学学，找了个大神的配置和主题，体验十分良好。虽然目前离使用一些高级命令还差得很远，但已经能满足日常的编辑需要了。至于Sublime，主要是简单好用，插件丰富，故而也很喜欢。当然，顺便也有看一点<code>vim</code>的教程，但是看到页面上有大概几百个命令，然后就......没有然后了：）。</li>
+</ul>
+<p><a href="#table">回到目录</a></p>
+<hr />
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>二、各类脚本编写</h2>
+<blockquote>
+<p>大多前期测试的脚本，在中期都融入到PandarTool中成为某个功能或其部分了，仅列出当前仍独立使用的脚本。</p>
+</blockquote>
+<h4 id="1-waveshowpy-db-pdf"><a name="user-content-1-waveshowpy-db-pdf" href="#1-waveshowpy-db-pdf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. 波形显示脚本 <code>waveShow.py</code> [输入DB] [输出PDF] <a name="waveShow"></a></h4>
+<p>用于查看波形，生成结果为一个画有波形图的PDF文件，其中多次光强的测量结果在同一张图上以不同颜色表示，如下图：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/waveShow.png" /><br />
+用法：<br />
+<pre><code class="bash">python waveShow.py yourPath/yourWaveData.db
+</code></pre></p>
+<h4 id="2-waveadaptpy"><a name="user-content-2-waveadaptpy" href="#2-waveadaptpy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. 波形匹配脚本 <code>waveAdapt.py</code> [独立运行] <a name="waveAdapt"></a></h4>
+<p>用于自动调整光强以匹配波形使得峰值在指定范围内(140±5)并测量，最终生成40个图像文件，对应40个通道<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAdapt.png" /><br />
+图像横轴为光强(间距为5)，纵轴为对应光强下波形峰值在140±5时的测距(16次取均值)<br />
+用法：<br />
+使用PanadarTool调节设备，确定A0通道后，命令行输入<br />
+<pre><code class="bash">python waveAdapt.py
+</code></pre></p>
+<h4 id="3-waveanalyzepy-db-pdf"><a name="user-content-3-waveanalyzepy-db-pdf" href="#3-waveanalyzepy-db-pdf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. 波形分析脚本 <code>waveAnalyze.py</code> [输入DB] [输出PDF] <a name="waveAnalyze"></a></h4>
+<p>用于获取波形相关参数信息，生成对应分析表格，报告峰值、时长等信息，生成结果如下图：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAnalyze_1.png" /><br />
+点击对应通道可跳转至对应通道的测量数据：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAnalyze_2.png" /><br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAnalyze_3.png" /><br />
+其中，黄色实线为75，绿色点划线为所选基线，绿色实线为基线+10，红色点为峰值点(Y值与峰值相等的点)<br />
+用法：<br />
+<pre><code class="bash">python waveAnalyze.py yourPath/yourWaveData.db
+</code></pre></p>
+<h4 id="4-datainsertpy-db-db"><a name="user-content-4-datainsertpy-db-db" href="#4-datainsertpy-db-db" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. 数据插入脚本 <code>dataInsert.py</code> [输入DB] [更新DB] <a name="dataInsert"></a></h4>
+<p>用于测量单个通道并插入指定KeyPoints数据库中(需要改写脚本内的下图对应参数变量)<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/dataInsert.png" /></p>
+<blockquote>
+<p>PS: 用于测量至一半，补测后部分；单通道更新不用此脚本</p>
+</blockquote>
+<p>用法：<br />
+<pre><code class="bash">python dataInsert.py yourPath/yourKeyPointsDB.db
+</code></pre></p>
+<h4 id="5-pointshowpy-mat"><a name="user-content-5-pointshowpy-mat" href="#5-pointshowpy-mat" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. 点云显示脚本 <code>pointShow.py</code> [输入Mat] [显示点云] <a name="pointShow"></a></h4>
+<p>用于显示由<code>pointCloud.py</code>所采集的点云(.mat文件)<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/pointShow.png" /><br />
+用法：<br />
++ 直接在含有对应 .mat 文件的路径内双击运行，或在该路径下运行 <code>python pointShow.py</code><br />
+<pre><code class="bash"> python pointShow.py yourPath/yourPointCloud.mat
+</code></pre></p>
+<h4 id="6-distshowpy-db-pdf"><a name="user-content-6-distshowpy-db-pdf" href="#6-distshowpy-db-pdf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6. 数据显示脚本<code>distShow.py</code> [输入DB] [输出PDF] <a name="distShow"></a></h4>
+<p>用于显示获取到的<code>keyPoints</code>数据或<code>distMean</code>数据，使用此脚本需要在同路径下有<code>config.cfg</code>文件，用于限定对应参数，详见项目内的该文件；<br />
+<code>mode = 1</code>时，处理<code>keyPoints</code>数据，所得PDF表格如下：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/distShow_1.png" /><br />
+用法：<br />
+<pre><code class="bash">python distShow.py yourPath/yourKeyPointsDB.db
+</code></pre><br />
+<code>mode = 0</code>时，处理<code>distMean</code>数据，所得PDF表格如下：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/distShow_2.png" /><br />
+用法：<br />
+<pre><code class="bash">python distShow.py yourPath/yourDistMeanDB.db
+</code></pre></p>
+<h4 id="7-t_basebasegetpy"><a name="user-content-7-t_basebasegetpy" href="#7-t_basebasegetpy" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7. t_base获取脚本<code>baseGet.py</code> [独立运行] <a name="baseGet"></a></h4>
+<p>用于获取<code>t_base</code>参数，保存获取的参数为<code>t_base.csv</code>，并生成相应的校准文件，同时对原始数据和比对数据绘图并保存；<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/baseGet.png" /><br />
+用法：<br />
+<pre><code class="bash">python baseGet.py
+</code></pre></p>
+<h4 id="8-writeparapy-param"><a name="user-content-8-writeparapy-param" href="#8-writeparapy-param" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8. 数据串口烧写脚本<code>writePara.py</code> [输入param] [串口烧写] <a name="writePara"></a></h4>
+<p>用于将生成的<code>.param</code>文件烧写到FPGA中，用法为：<br />
+<pre><code class="bash">python writePara.py yourPath/Lidar-x.param
+or
+python writePara.py
+</code></pre></p>
+<p><a href="#table">回到目录</a></p>
+<hr />
+<h2 id="pandartool"><a name="user-content-pandartool" href="#pandartool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>三、PandarTool开发维护</h2>
+<h4 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(一) 基本介绍</h4>
+<ul>
+<li>文件明细如下图(部分依赖项或测试内容以灰色标注)<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/PandarTool_Extra.png" /></li>
+<li>其中，<code>smallConrtol.py</code>为主要接口，用于与原<code>PandarTool</code>部分对接；<code>replace/</code>文件夹内为需要替换或添加到原<code>PandarTool</code>相应路径下的文件，具体路径见<code>README.md</code>内介绍；<code>tools/</code>文件夹内主要为各个脚本和相应的测试内容。</li>
+<li>下载链接为：<ul>
+<li><a href="ssh://git@code.hesaitech.cn:10022/suxingyu/PandarTool_Extra.git">ssh://git@code.hesaitech.cn:10022/suxingyu/PandarTool_Extra.git</a></li>
+<li><a href="http://code.hesaitech.cn:10080/suxingyu/PandarTool_Extra.git"><a href="http://code.hesaitech.cn:10080/suxingyu/PandarTool_Extra.git"><a href="http://code.hesaitech.cn:10080/suxingyu/PandarTool_Extra.git">http://code.hesaitech.cn:10080/suxingyu/PandarTool_Extra.git</a></a></a></li>
+</ul>
+</li>
+</ul>
+<h4 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(二) 主要功能</h4>
+<h5 id="1-wavedata"><a name="user-content-1-wavedata" href="#1-wavedata" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. 波形数据waveData获取 <a name="waveData"></a></h5>
+<ul>
+<li>确认A0通道后，可点击<code>Extra波形获取</code>采集相关波形参数：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/waveData.png" /></li>
+<li>保存文件后，即开始测量，采集从光强10 -&gt; 40 -&gt; 150，每个光强下由A0 -&gt; A19 -&gt; B0 -&gt; B19，每个通道测量一次数据(<strong>1024</strong>个点)，共计耗时约5分钟，测完后跳转至A0通道10光强。</li>
+<li>测完的波形数据可用 <a href="#waveShow">waveShow.py</a> 脚本进行显示，也可用<a href="#waveAnalyze">waveAnalyze.py</a>脚本进行波形分析。</li>
+</ul>
+<h5 id="2-keypoints"><a name="user-content-2-keypoints" href="#2-keypoints" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. 校准数据KeyPoints获取 <a name="keyPoints"></a></h5>
+<ul>
+<li>确认A0通道后，先勾选<code>来回移动遮挡片</code>，再点击<code>Extra校准数据</code>，保存文件后即开始测量。<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/keyPoints.png" /></li>
+<li>采集从光强10 -&gt; 40 -&gt; 150，每个光强下由A0 -&gt; A19 -&gt; B0 -&gt; B19，每个通道采集<strong>6144</strong>(192*32)个点，每次切换通道后会自动打开实时显示(RealTimeChart)，每次测量从橙色框开始，测量进行到1/3(<strong>2048</strong>)个点时，转台左移1000，激光照射到白色方框处测量，到2/3(<strong>4096</strong>)个点时，转台右移2000，激光照射到黑色方框处，至该通道测量结束。共计耗时约80分钟，测完后跳转至A0通道10光强。</li>
+<li>测完的数据可用 <a href="#distShow">distShow.py</a>脚本进行显示，也可使用<a href="#extraImport">数据查看与修改</a>进行查看修改，可使用<a href="#updateData">单通道更新</a>更新指定通道，也可用于<a href="#formatData">格式输出</a></li>
+</ul>
+<h5 id="3-distmean"><a name="user-content-3-distmean" href="#3-distmean" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. 校准数据DistMean获取 <a name="distMean"></a></h5>
+<ul>
+<li>采集过程与<a href="#keyPoints">KeyPoints获取</a>基本相同，仅需在点击<code>Extra校准数据</code>前不勾选<code>来回移动遮挡片</code>即可。</li>
+<li>同样，每次切换通道后会自动打开实时显示(RealTimeChart)，但不再在中途移动转台，而仅测量打在橙色框中的数据，每个通道<strong>256</strong>(8*32)个点，共计耗时约10分钟，测完后跳转至A0通道10光强。</li>
+<li>测完的数据可用 <a href="#distShow">distShow.py</a>脚本进行显示，可使用<a href="#updateData">单通道更新</a>更新指定通道，也可用于<a href="#formatData">格式输出</a></li>
+</ul>
+<h5 id="4"><a name="user-content-4" href="#4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4. 数据查看与修改 <a name="extraImport"></a></h5>
+<ul>
+<li>勾选校准页面的<code>Extra数据库导入</code>后，点击<code>数据导入</code>即可导入测量得到的KeyPoints数据：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/extraImport_1.png" /></li>
+<li>导入后可点击查看对应通道的数据如下：(导入后，在原<code>Extra数据库导入</code>处显示打开的文件名及路径)<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/extraImport_2.png" /></li>
+<li>其中，右上角为原始数据及计算所得关键点(红色为当前选中点)，右下角为原始数据经关键点得到的残差，数字键<code>1``2</code>可左右选择关键点，关键点坐标可调节，键盘上下左右为微调(<strong>步长0.01</strong>)，按住<code>Ctrl</code>上下左右为普通调(<strong>步长0.1</strong>)，按住<code>Shift</code>上下左右为粗调(<strong>步长1</strong>)。</li>
+<li><code>Ctrl+P</code>可切换为上一个通道，<code>Ctrl+N</code>可切换为下一个通道，切换至两端时，会保留当前通道不变。另外，<code>Ctrl+Q</code>可实现定点功能，在原始数据表中放置鼠标，按下<code>Ctrl+Q</code>即可将当前选中点的坐标改为当前鼠标所在点的坐标位置。</li>
+</ul>
+<h5 id="5"><a name="user-content-5" href="#5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5. 单通道更新 <a name="updateData"></a></h5>
+<ul>
+<li>当有较差数据时，可使用<code>Extra更新通道</code>按钮进行更新，且仍以<code>来回移动遮挡片</code>选框为标志区分更新KeyPoints和DistMean两种数据。方法如下：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/updateData_1.png" /><ul>
+<li>更新KeyPoints数据：确定A0通道后，勾选<code>来回移动遮挡片</code>，勾选<code>选择后移动激光器</code>，并选择对应要更新的通道(此处以A0为例)，再调节光强至目标档位(仅10/40/150三个档位可选，此处以10为例)，最后点击&rsquo;Extra通道更新&rsquo;选择对应<code>KeyPoints</code>文件，即可更新该文件内对应光强对应通道的数据。<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/updateData_2.png" /><br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/updateData_3.png" /></li>
+<li>更新DistMean数据：同上，不勾选<code>来回移动遮挡片</code>，并且在选择文件时选择<code>DistMean</code>数据文件即可</li>
+</ul>
+</li>
+</ul>
+<h5 id="6"><a name="user-content-6" href="#6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>6. 数据检查与格式输出 <a name="formatData"></a></h5>
+<ul>
+<li><strong>数据检查</strong><ul>
+<li>人工粗略检查并更新后，可进行数据检查，点击<code>Extra格式输出</code>，依次选择KeyPoints数据文件和DistMean数据文件，即开始数据检查，耗时约5秒。检查后，弹出窗口提示可能存在错误的通道，如图：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_1.png" /></li>
+<li>且会在KeyPoints数据文件路径下生成检查报表，如图：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_2.png" /></li>
+<li>对此处异常通道A7-&gt;光强1500ns，查看数据可发现，中间有明显断电，数据确实不合格。<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_3.png" /></li>
+<li>此时，可选择细微调整或<a href="#updateData">更新通道</a></li>
+</ul>
+</li>
+<li>待排查所有错误后，可进行<strong>格式输出</strong><ul>
+<li>点击<code>Extra格式输出</code>，待检查完毕且错误在可接受范围内时，点击<code>Yes</code>进行格式输出，约30秒输出完毕，生成6个校准文件和1个校准报表。<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_4.png" /></li>
+<li>报表前部分表格内容与检查表格内容相同，后部分为每个通道对应的数据明细情况，以待进一步检查，链接模式与<a href="#waveAnalyze">波形分析</a>部分相同。<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_5.png" /></li>
+<li>其中，蓝色点为原始数据点，红色点为计算所得的关键点，横坐标从0到最大关键点横坐标加0.5，纵坐标为关键的点两侧偏移0.1，黄色点为DistMean数据点，黄色实线为其均值所在Y值处水平线。</li>
+</ul>
+</li>
+<li>格式输出完毕后，会弹出窗口询问是否进行<strong>串口烧写</strong>(Lidarboard板上相关功能尚未匹配)<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_6.png" /><ul>
+<li>若选择No，则不进行串口烧写</li>
+<li>若选择Yes，则将会把生成的数据通过串口烧写到上仓板，过程持续约2分钟，且烧写过程中PandarTool界面黑屏。</li>
+</ul>
+</li>
+</ul>
+<h5 id="7"><a name="user-content-7" href="#7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>7. 点云扫描与保存 <a name="pointCloud"></a></h5>
+<ul>
+<li>数据烧写完成后，即可进行点云扫描验证Lidar校准是否正确，方法为：<br />
+<pre><code class="bash">python pointcloud.py
+</code></pre></li>
+<li>或双击脚本文件pointcloud.py也可。点云扫描完成后会弹出VTK渲染窗口，可用鼠标缩放、拖动、旋转点云查看，同时会在当前运行路径下生成对应的点云数据文件，以时间为前缀命名。该文件可用<a href="#pointShow">点云查看脚本</a>复现查看。</li>
+</ul>
+<h5 id="8"><a name="user-content-8" href="#8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>8. 程序运行信息显示 <a name="plainText"></a></h5>
+<ul>
+<li>本部分用于测试过程中输出相关程序信息，以供了解当前运行动态和保留操作历史以便排查错误。<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_1.png" /></li>
+<li>主要信息有如下几种：<ul>
+<li>确认A0通道时，提示已确认：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_2.png" /></li>
+<li>开始/停止自动刷新波形/实时刷新数据时(此二者用同一张表显示，互斥)：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_3.png" /><br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_4.png" /></li>
+<li>开始测量时，提示相关信息(类型、文件名、光强、通道等)：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_5.png" /></li>
+<li>测量过程中，提示相关信息(单通道时间、左移右移提示、数据总数等)：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_6.png" /></li>
+<li><code>停止</code>按钮提供暂停/继续功能，此时会提示相关信息(通道，当前测数)：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_7.png" /><br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_8.png" /></li>
+</ul>
+</li>
+</ul>
+<h4 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(三) 其他及注意事项</h4>
+<ol>
+<li>相互冲突：<br />
+<code>自动刷新波形</code>和<code>校准数据</code>功能占用同一个绘图表格，互相冲突，不能同时选中；且测量数据时，不推荐勾选<code>自动刷新波形</code>，一是测量时在移动通道后会开启<code>校准数据</code>的实时刷新，与<code>自动刷新波形</code>冲突，<del>二是<code>自动刷新波形</code>会读取当前RadioButton选中的通道，每次测量时自动移动至该通道，与采集数据的移动通道冲突</del>(此部分已优化)。</li>
+<li>软件卡顿<br />
+    软件卡顿可能有多种原因，若出现黑屏，多半为网络延时过高或某个函数采集数据时未收到上仓板数据反馈；<a href="#formatData">格式输出</a>的黑屏是正常现象，无需担心。</li>
+</ol>
+<p><a href="#table">回到目录</a></p>
+<hr />
+<h2 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>四、上仓板测试用保护外壳</h2>
+<h4 id="3d"><a name="user-content-3d" href="#3d" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(一) 3D打印外壳</h4>
+<p><img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/Board_1.png" /><br />
++ 整体来说结构并不复杂，但因考虑不周还是改了好几版，浪费了一些材料，风扇安装孔是全凭感觉做的(网上没有找到相关说明)，也还能凑和用，不过目前整体的安装拆卸并不方便。<br />
++ 比较奇怪的是，一开始设计的是上板有支撑而下板几乎空白，结构明显不合理(主要接线在板上方)，居然到第四版才发现，还是经验太不充足。</p>
+<h4 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(二) 电源转接板</h4>
+<p><img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/Board_2.png" /><br />
++ 很简单的一个小板子，只有一个电源接入和两个电源输出，但还是花了不少时间。主要难度在于从头开始，没有系统的学习，加上第一次就要自己制作元件库，还是颇为麻烦。<br />
++ 犯了很多低级错误。边缘处三个焊盘本用作定位孔，但因为拿到没有具体参数，只能手工比对位置，结果却把位置定反；另外，因为个人疏忽，把size 和 hole 设置错了，导致收到的板子并没有安装定位孔。以及尺寸设计超范围，要正常安装上需要将板子左下角磨掉约1毫米(上图PCB视图下)。<br />
++ 但好在也勉强能用，不至于彻底浪费。。。</p>
+<p><a href="#table">回到目录</a></p>
+<hr />
+<h2 id="verilog"><a name="user-content-verilog" href="#verilog" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>五、Verilog 随机数生成器</h2>
+<h4 id="mersenne-twister"><a name="user-content-mersenne-twister" href="#mersenne-twister" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(一) Mersenne Twister随机数生成器</h4>
+<ul>
+<li>[Mersenne Twister]<sup id="fnref:Mersenne"><a class="footnote-ref" href="#fn:Mersenne" rel="footnote">1</a></sup>是一个伪随机数发生算法，其最为广泛使用的MT19937可达到2^19937-1长的周期，在1&lt;=k&lt;=623的维度之间都可以均等分布。故而一开始尝试用此种方法写随机数生成器，用python实现了一个简易的测试如下图：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/Mersenne.png" /></li>
+<li>可见其随机性还算不错，但问题在于其用到了较多的质数相乘，大型数组，对FPGA资源消耗巨大，故未继续采用。</li>
+</ul>
+<h4 id="tausworthe"><a name="user-content-tausworthe" href="#tausworthe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>(二) Tausworthe 随机数生成器</h4>
+<ul>
+<li>简单调研了一下如AES、Hash等随机数生成算法，最终采用了Tausworthe算法，基于一个开源的[github项目]<sup id="fnref:Tausworthe"><a class="footnote-ref" href="#fn:Tausworthe" rel="footnote">2</a></sup>修改了一个供测试的程序如下：<br />
+<img alt="" src="https://raw.githubusercontent.com/SuXY15/MyPic/master/Tausworthe.png" /><br />
+其中靛、黄、紫三种颜色的点来自三个种子随机生成的数据(依次覆盖，故而看上去占比不一样)，可见随机性也已足够好，故最终采用。</li>
+</ul>
+<p><a href="#table">回到目录</a></p>
+<hr />
+<h2 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>六、简要总结</h2>
+<p><font size=4>总的来说学到了很多新姿势，锻炼了自己的编程能力，同时也发现了自己的很多不足：</font></p>
+<ul>
+<li><font size=3>经常安排的任务并没有妥善做完做好，完成到90%的时候就开始松懈，导致<strong>收尾较差</strong>;</font></li>
+<li><font size=3>刚到时感觉一切很新鲜，干劲很足，后来慢慢<strong>变得懒散</strong>;</font></li>
+<li><font size=3>有些内容可以更加完善，但因难度较大或收益较小而并<strong>未能尽善尽美</strong>; </font></li>
+<li><font size=3>学习AD时，完美体现了“<strong>欲速则不达</strong>”，越想速成，越难以入门，最后还是一步一步看视频教程;</font></li>
+</ul>
+<p><a href="#table">回到目录</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:Mersenne">
+<p><a href="https://en.wikipedia.org/wiki/Mersenne_Twister&#160;"><a href="https://en.wikipedia.org/wiki/Mersenne_Twister&#160;"><a href="https://en.wikipedia.org/wiki/Mersenne_Twister&#160;">https://en.wikipedia.org/wiki/Mersenne_Twister&#160;</a></a></a><a class="footnote-backref" href="#fnref:Mersenne" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Tausworthe">
+<p><a href="https://github.com/scottwilson46/FPGARandom&#160;"><a href="https://github.com/scottwilson46/FPGARandom&#160;"><a href="https://github.com/scottwilson46/FPGARandom&#160;">https://github.com/scottwilson46/FPGARandom&#160;</a></a></a><a class="footnote-backref" href="#fnref:Tausworthe" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></article></body></html>
