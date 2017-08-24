@@ -49,7 +49,9 @@ HesaiTech 实习工作汇报 <a name="Title"> </a>
 
 #### 1. 波形显示脚本 `waveShow.py` [输入DB] [输出PDF] <a name="waveShow"></a>
 用于查看波形，生成结果为一个画有波形图的PDF文件，其中多次光强的测量结果在同一张图上以不同颜色表示，如下图：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/waveShow.png)
+
 用法：
 ```bash
 python waveShow.py yourPath/yourWaveData.db
@@ -57,7 +59,9 @@ python waveShow.py yourPath/yourWaveData.db
 
 #### 2. 波形匹配脚本 `waveAdapt.py` [独立运行] <a name="waveAdapt"></a>
 用于自动调整光强以匹配波形使得峰值在指定范围内(140±5)并测量，最终生成40个图像文件，对应40个通道
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAdapt.png)
+
 图像横轴为光强(间距为5)，纵轴为对应光强下波形峰值在140±5时的测距(16次取均值)
 用法：
 使用PanadarTool调节设备，确定A0通道后，命令行输入
@@ -67,10 +71,15 @@ python waveAdapt.py
 
 #### 3. 波形分析脚本 `waveAnalyze.py` [输入DB] [输出PDF] <a name="waveAnalyze"></a>
 用于获取波形相关参数信息，生成对应分析表格，报告峰值、时长等信息，生成结果如下图：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAnalyze_1.png)
+
 点击对应通道可跳转至对应通道的测量数据：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAnalyze_2.png)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/waveAnalyze_3.png)
+
 其中，黄色实线为75，绿色点划线为所选基线，绿色实线为基线+10，红色点为峰值点(Y值与峰值相等的点)
 用法：
 ```bash
@@ -79,7 +88,9 @@ python waveAnalyze.py yourPath/yourWaveData.db
 
 #### 4. 数据插入脚本 `dataInsert.py` [输入DB] [更新DB] <a name="dataInsert"></a>
 用于测量单个通道并插入指定KeyPoints数据库中(需要改写脚本内的下图对应参数变量)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/dataInsert.png)
+
 > PS: 用于测量至一半，补测后部分；单通道更新不用此脚本
 
 用法：
@@ -88,7 +99,9 @@ python dataInsert.py yourPath/yourKeyPointsDB.db
 ```
 #### 5. 点云显示脚本 `pointShow.py` [输入Mat] [显示点云] <a name="pointShow"></a>
 用于显示由`pointCloud.py`所采集的点云(.mat文件)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/pointShow.png)
+
 用法：
 + 直接在含有对应 .mat 文件的路径内双击运行，或在该路径下运行 ``` python pointShow.py ```
 ```bash
@@ -98,13 +111,17 @@ python dataInsert.py yourPath/yourKeyPointsDB.db
 #### 6. 数据显示脚本`distShow.py` [输入DB] [输出PDF] <a name="distShow"></a>
 用于显示获取到的`keyPoints`数据或`distMean`数据，使用此脚本需要在同路径下有`config.cfg`文件，用于限定对应参数，详见项目内的该文件；
 `mode = 1`时，处理`keyPoints`数据，所得PDF表格如下：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/distShow_1.png)
+
 用法：
 ```bash
 python distShow.py yourPath/yourKeyPointsDB.db
 ```
 `mode = 0`时，处理`distMean`数据，所得PDF表格如下：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/distShow_2.png)
+
 用法：
 ```bash
 python distShow.py yourPath/yourDistMeanDB.db
@@ -112,7 +129,9 @@ python distShow.py yourPath/yourDistMeanDB.db
 
 #### 7. t_base获取脚本`baseGet.py` [独立运行] <a name="baseGet"></a>
 用于获取`t_base`参数，保存获取的参数为`t_base.csv`，并生成相应的校准文件，同时对原始数据和比对数据绘图并保存；
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/baseGet.png)
+
 用法：
 ```bash
 python baseGet.py
@@ -135,22 +154,29 @@ python writePara.py
 ----------
 #### (一) 基本介绍
 + 文件明细如下图(部分依赖项或测试内容以灰色标注)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/PandarTool_Extra.png)
+
 + 其中，`smallConrtol.py`为主要接口，用于与原`PandarTool`部分对接；`replace/`文件夹内为需要替换或添加到原`PandarTool`相应路径下的文件，具体路径见`README.md`内介绍；`tools/`文件夹内主要为各个脚本和相应的测试内容。
 + 下载链接为：
+
     * [ssh://git@code.hesaitech.cn:10022/suxingyu/PandarTool_Extra.git][4]
     * [http://code.hesaitech.cn:10080/suxingyu/PandarTool_Extra.git][5]
 
 #### (二) 主要功能
 ##### 1. 波形数据waveData获取 <a name="waveData"></a>
 + 确认A0通道后，可点击`Extra波形获取`采集相关波形参数：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/waveData.png)
+
 + 保存文件后，即开始测量，采集从光强10 -> 40 -> 150，每个光强下由A0 -> A19 -> B0 -> B19，每个通道测量一次数据(**1024**个点)，共计耗时约5分钟，测完后跳转至A0通道10光强。
 + 测完的波形数据可用 [waveShow.py](#waveShow) 脚本进行显示，也可用[waveAnalyze.py](#waveAnalyze)脚本进行波形分析。
 
 ##### 2. 校准数据KeyPoints获取 <a name="keyPoints"></a>
 + 确认A0通道后，先勾选`来回移动遮挡片`，再点击`Extra校准数据`，保存文件后即开始测量。
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/keyPoints.png)
+
 + 采集从光强10 -> 40 -> 150，每个光强下由A0 -> A19 -> B0 -> B19，每个通道采集**6144**(192*32)个点，每次切换通道后会自动打开实时显示(RealTimeChart)，每次测量从橙色框开始，测量进行到1/3(**2048**)个点时，转台左移1000，激光照射到白色方框处测量，到2/3(**4096**)个点时，转台右移2000，激光照射到黑色方框处，至该通道测量结束。共计耗时约80分钟，测完后跳转至A0通道10光强。
 + 测完的数据可用 [distShow.py](#distShow)脚本进行显示，也可使用[数据查看与修改](#extraImport)进行查看修改，可使用[单通道更新](#updateData)更新指定通道，也可用于[格式输出](#formatData)
 
@@ -161,37 +187,58 @@ python writePara.py
 
 ##### 4. 数据查看与修改 <a name="extraImport"></a>
 + 勾选校准页面的`Extra数据库导入`后，点击`数据导入`即可导入测量得到的KeyPoints数据：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/extraImport_1.png)
+
 + 导入后可点击查看对应通道的数据如下：(导入后，在原`Extra数据库导入`处显示打开的文件名及路径)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/extraImport_2.png)
+
 + 其中，右上角为原始数据及计算所得关键点(红色为当前选中点)，右下角为原始数据经关键点得到的残差，数字键`1``2`可左右选择关键点，关键点坐标可调节，键盘上下左右为微调(**步长0.01**)，按住`Ctrl`上下左右为普通调(**步长0.1**)，按住`Shift`上下左右为粗调(**步长1**)。
 + `Ctrl+P`可切换为上一个通道，`Ctrl+N`可切换为下一个通道，切换至两端时，会保留当前通道不变。另外，`Ctrl+Q`可实现定点功能，在原始数据表中放置鼠标，按下`Ctrl+Q`即可将当前选中点的坐标改为当前鼠标所在点的坐标位置。
 
 ##### 5. 单通道更新 <a name="updateData"></a>
 + 当有较差数据时，可使用`Extra更新通道`按钮进行更新，且仍以`来回移动遮挡片`选框为标志区分更新KeyPoints和DistMean两种数据。方法如下：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/updateData_1.png)
+
     * 更新KeyPoints数据：确定A0通道后，勾选`来回移动遮挡片`，勾选`选择后移动激光器`，并选择对应要更新的通道(此处以A0为例)，再调节光强至目标档位(仅10/40/150三个档位可选，此处以10为例)，最后点击'Extra通道更新'选择对应`KeyPoints`文件，即可更新该文件内对应光强对应通道的数据。
+    
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/updateData_2.png)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/updateData_3.png)
+
     * 更新DistMean数据：同上，不勾选`来回移动遮挡片`，并且在选择文件时选择`DistMean`数据文件即可
 
 ##### 6. 数据检查与格式输出 <a name="formatData"></a>
 + **数据检查**
     * 人工粗略检查并更新后，可进行数据检查，点击`Extra格式输出`，依次选择KeyPoints数据文件和DistMean数据文件，即开始数据检查，耗时约5秒。检查后，弹出窗口提示可能存在错误的通道，如图：
+    
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_1.png)
+
     * 且会在KeyPoints数据文件路径下生成检查报表，如图：
+    
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_2.png)
-    * 对此处异常通道A7->光强1500ns，查看数据可发现，中间有明显断电，数据确实不合格。
+
+    * 对此处异常通道A7->光强1500ns，查看数据可发现，中间有明显断点，数据确实不合格。
+    
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_3.png)
+
     * 此时，可选择细微调整或[更新通道](#updateData)
 + 待排查所有错误后，可进行**格式输出**
     * 点击`Extra格式输出`，待检查完毕且错误在可接受范围内时，点击`Yes`进行格式输出，约30秒输出完毕，生成6个校准文件和1个校准报表。
+    
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_4.png)
+
     * 报表前部分表格内容与检查表格内容相同，后部分为每个通道对应的数据明细情况，以待进一步检查，链接模式与[波形分析](#waveAnalyze)部分相同。
+    
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_5.png)
+
     * 其中，蓝色点为原始数据点，红色点为计算所得的关键点，横坐标从0到最大关键点横坐标加0.5，纵坐标为关键的点两侧偏移0.1，黄色点为DistMean数据点，黄色实线为其均值所在Y值处水平线。
 + 格式输出完毕后，会弹出窗口询问是否进行**串口烧写**(Lidarboard板上相关功能尚未匹配)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/formatData_6.png)
+
     * 若选择No，则不进行串口烧写
     * 若选择Yes，则将会把生成的数据通过串口烧写到上仓板，过程持续约2分钟，且烧写过程中PandarTool界面黑屏。
 
@@ -204,20 +251,34 @@ python pointcloud.py
 
 ##### 8. 程序运行信息显示 <a name="plainText"></a>
 + 本部分用于测试过程中输出相关程序信息，以供了解当前运行动态和保留操作历史以便排查错误。
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_1.png)
+
 + 主要信息有如下几种：
      * 确认A0通道时，提示已确认：
+     
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_2.png)
+
      * 开始/停止自动刷新波形/实时刷新数据时(此二者用同一张表显示，互斥)：
+     
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_3.png)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_4.png)
+
      * 开始测量时，提示相关信息(类型、文件名、光强、通道等)：
+     
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_5.png)
+
      * 测量过程中，提示相关信息(单通道时间、左移右移提示、数据总数等)：
+     
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_6.png)
+
      * `停止`按钮提供暂停/继续功能，此时会提示相关信息(通道，当前测数)：
+     
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_7.png)
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/plainText_8.png)
+
 
 #### (三) 其他及注意事项
 1. 相互冲突：
@@ -231,12 +292,16 @@ python pointcloud.py
 四、上仓板测试用保护外壳
 ----------
 #### (一) 3D打印外壳
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/Board_1.png)
+
 + 整体来说结构并不复杂，但因考虑不周还是改了好几版，浪费了一些材料，风扇安装孔是全凭感觉做的(网上没有找到相关说明)，也还能凑和用，不过目前整体的安装拆卸并不方便。
 + 比较奇怪的是，一开始设计的是上板有支撑而下板几乎空白，结构明显不合理(主要接线在板上方)，居然到第四版才发现，还是经验太不充足。
 
 #### (二) 电源转接板
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/Board_2.png)
+
 + 很简单的一个小板子，只有一个电源接入和两个电源输出，但还是花了不少时间。主要难度在于从头开始，没有系统的学习，加上第一次就要自己制作元件库，还是颇为麻烦。
 + 犯了很多低级错误。边缘处三个焊盘本用作定位孔，但因为拿到没有具体参数，只能手工比对位置，结果却把位置定反；另外，因为个人疏忽，把size 和 hole 设置错了，导致收到的板子并没有安装定位孔。以及尺寸设计超范围，要正常安装上需要将板子左下角磨掉约1毫米(上图PCB视图下)。
 + 但好在也勉强能用，不至于彻底浪费。。。
@@ -249,12 +314,16 @@ python pointcloud.py
 
 #### (一) Mersenne Twister随机数生成器
 + [Mersenne Twister][^Mersenne]是一个伪随机数发生算法，其最为广泛使用的MT19937可达到2^19937-1长的周期，在1<=k<=623的维度之间都可以均等分布。故而一开始尝试用此种方法写随机数生成器，用python实现了一个简易的测试如下图：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/Mersenne.png)
+
 + 可见其随机性还算不错，但问题在于其用到了较多的质数相乘，大型数组，对FPGA资源消耗巨大，故未继续采用。
 
 #### (二) Tausworthe 随机数生成器
 + 简单调研了一下如AES、Hash等随机数生成算法，最终采用了Tausworthe算法，基于一个开源的[github项目][^Tausworthe]修改了一个供测试的程序如下：
+
 ![](https://raw.githubusercontent.com/SuXY15/MyPic/master/Tausworthe.png)
+
 其中靛、黄、紫三种颜色的点来自三个种子随机生成的数据(依次覆盖，故而看上去占比不一样)，可见随机性也已足够好，故最终采用。
 
 [回到目录](#table)
