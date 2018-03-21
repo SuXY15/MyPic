@@ -1,28 +1,21 @@
 <h1 align='center'>Curriculum Vitae</h1>
 
-## Basic Information
-<p><strong>Name:         </strong> Su Xingyu                   </p>
-<p><strong>Gender:       </strong> Male                        </p>
-<p><strong>Date of Birth:</strong> October 18, 1996            </p>
-<p><strong>Address:      </strong> Haidian, Beijing, P.R.China </p>
-<p><strong>Phone Number: </strong> 18728785954                 </p>
-<p><strong>Email:        </strong> <a href="suxy15@mails.tsinghua.edu.cn">suxy15@mails.tsinghua.edu.cn</a> / 
-                                   <a href="suxy15tsinghua@gmail.com">   suxy15tsinghua@gmail.com    </a>  </p>
+### Bio
+&nbsp;&nbsp;&nbsp;&nbsp;I am a Senior student in Department of Energy and Power Engeering, [Tsinghua University](http://www.tsinghua.edu.cn/publish/newthuen/index.html).
 
-## Education:
-|    Period   | Institution                                                     | Level         |
-|:-----------:|:----------------------------------------------------------------|:--------------|
-|  2015-2019  | Tsinghua University, Department of Energy and Power Engineering.| Undergraduate |
-
-## Reserch Experience
-#### 1. Portabl construction material thermal property measuring instrument
+&nbsp;&nbsp;&nbsp;&nbsp;Everyone needed can contact me by  [suxy15@mails.tsinghua.edu.cn](suxy15@mails.tsinghua.edu.cn) or [suxy15tsinghua@gmail.com](suxy15tsinghua@gmail.com)
 
 
-#### 2. Bicycles' locating by BLE bluetooth module
+### Reserch Experience
++ Portabl construction material thermal property measuring instrument
 
++ Bicycles' locating by BLE bluetooth module
 
-#### 3. CFD simulation of spherical inward propagating Carbon-Oxygen flame(IPF) of type Ia supernova
++ CFD simulation of spherical inward propagating Carbon-Oxygen flame(IPF) of type Ia supernova
 
++ CFD simulation of electrostatic precipitators(ESP)
 
-#### 4. CFD simulation of electrostatic precipitators(ESP)
-
+### Honors and Rewards
++ 04/2017 Third Prize of Challenge Cup, Tsinghua
++ 10/2017 Scholarship for Technology Innovation Excellence, Tsinghua
++ 11/2017 National First Prize pf CUMCM, China
